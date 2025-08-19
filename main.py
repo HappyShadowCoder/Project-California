@@ -9,7 +9,6 @@ from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import StandardScaler , OneHotEncoder
 from sklearn.ensemble import RandomForestRegressor
-from sklearn.model_selection import cross_val_score
 
 MODEL_FILE = "model.pkl"
 PIPELINE_FILE = "pipeline.pkl"
@@ -75,4 +74,3 @@ else :
    input_data['median_house_value'] = predictions
 
    input_data.to_excel("output.xlsx" , index = False)
-   print("Infernece is Complete \nResults Saved to 'output.xlsx'")
